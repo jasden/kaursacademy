@@ -2,11 +2,207 @@
 <html>
 <head>
 	<title>KAUR'S ACADEMY</title>
-	<link rel="shortcut icon" type="img/png" href="./logo.PNG">
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="shortcut icon" type="img/png" href="./logo.png">
+
 </head>
+<style>
+	body{
+	margin: 0;
+}
+
+html{
+	scroll-behavior: smooth;
+	column-span: start;
+
+}
+
+
+.zone{
+
+}
+.blue{
+	display: flex;
+	list-style: none;
+	margin: 0;
+	font-size: 150%;
+     background: #7abcff; /* Old browsers */
+}
+
+
+.push{
+	margin-left: auto;
+	margin-right: 10px;
+}
+li{
+	padding: 20px;
+}
+a{
+	color: #f5f5f6;
+	text-decoration: none;
+}
+.sticky{
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+
+
+.home{
+/*	margin-top: 30px; */
+	height:100vh;
+
+	align-items: center;
+	justify-content: center;
+}
+.logo{
+	margin-top:30vh;
+
+
+	/*align-items: center;
+	justify-content: center;*/
+}
+button{
+	background: transparent;
+	color: #7abcff;
+	border-color: #7abcff; 
+}
+button:hover{
+	background: #7abcff;
+	color: white;
+	cursor: pointer;
+}
+
+.about{
+	color: white;
+	background: #7abcff;
+}
+/*.our{
+	color: white;
+	background: #7abcff;
+}*/
+
+.team{
+	display: grid;
+	grid-template-columns:33% 33% 33% ;
+	padding: 0px;
+
+	margin-bottom: 0;
+	/*color: white;
+	background:  #7abcff;*/ 
+}
+.teacher{
+	border: solid;
+	border-top: none;
+	/*border-bottom: none;*/
+
+	border-color: #7abcff;
+	border-width: 2px;
+}
+.contact{
+	background: #7abcff;
+	color: white;
+}
+
+.fonts{
+	background: #7abcff;
+	display: grid;1
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+	/*grid-template-rows: 50% 50%;*/
+	/*padding: 20px;*/
+}
+.chat{
+	width: 100vw;
+
+}
+section{
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	/*margin-left: 10px;*/
+	color:#7abcff;
+	font-size: 1em;
+	background: rgba(255,255,255,0.75);
+}
+.icon:hover::after{
+	content: attr(data-tooltip);
+
+}
+
+.blue:hover{
+	-webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #7abcff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  padding-top: 20vh;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  padding-top: 0;
+  right: 25px;
+  margin-left: 50px;
+}
+
+@media only screen and (orientation: portrait){
+	body{
+		font-size: 3rem;
+	}
+
+	button{
+		font-size: 3rem;
+	}
+
+	.pc{
+		display: none;
+	}
+	.teacher{
+		top: 0;
+	}
+}
+</style>
 <body align= "center">
-	<nav class="zone sticky">
+	<div class="menu" align="left" style="position: fixed;color: white;background: #7abcff;border-radius: 25px;padding: 10px; ">
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#about">About Us</a>
+  <a href="#team">Our Team</a>
+  <a href="#courses">Courses</a>
+  <a href="#contact">Contact Us</a>
+</div>
+	<nav class="zone sticky pc">
 		<ul class="blue">
 			<li><a href="./index.html">Home</a></li>
 			<li><a href="#about">About Us</a></li>
@@ -17,10 +213,10 @@
 		</ul>
 	</nav>
 	<div align="center" class="home zone" id="home">
-		<img align="center" src="./logo.PNG"><h1>KAUR'S ACADEMY</h1>
-		<br><a href="#about"><button>Get Started>>></button></a>
+		<img class="logo" align="center" src="./logo.png"><h1>KAUR'S ACADEMY</h1>
+		<br><a  href="#about"><button>Get Started>>></button></a>
 	</div>
-	<div class="chat zone"><a href="https://www.me/amarpreet.kaur.562"><section><span class="icon chat" data-tooltip=" Chat with us"><i class="fab fa-facebook-messenger"></span></section></a></i></div>
+	<div class="chat zone"><a href="https://www.m.me/amarpreet.kaur.562"><section><span class="icon chat" data-tooltip=" Chat with us"><i class="fab fa-facebook-messenger"></span></section></a></i></div>
 	<div class="about zone">
 		<h1 id="about">About Us</h1>
 		Kaur's Academy is an insitute which had given wonderfull results,
@@ -40,30 +236,30 @@
 		<h2>2020</h2>
 	<div class="team">
 		
-		<div class="teacher 1"><img src="">
+		<div class="teacher 1"><img src="student-1.PNG" height="250px" width="250px">
 			<h2>Avani Mewal</h2>
 			<b>Class:-</b> X<sup>th</sup>
 			<b>Subjects:-</b> Maths
 		 </div>
-			<div class="teacher 2"><img src="">
+			<div class="teacher 2"><img src="student-2.PNG" height="250px" width="250px">
 				<h2>Manmeet Singh</h2>
 				<b>Class:-</b> X<sup>th</sup>
 				<b>Subjects:-</b> Maths
 		 	</div>
-			<div class="teacher 3"><img src="">
+			<div class="teacher 3"><img src="" height="250px" width="250px">
 			<h2>Karishma Gera</h2>
 				<b>Class:-</b> X<sup>th</sup>
 				<b>Subjects:-</b> Maths
 			 </div>
-			<div class="teacher 3"><img src="">
+			<div class="teacher 3"><img src="" height="250px" width="250px">
 			<h2>Anwita Sharma</h2>
 				<b>Class:-</b> X<sup>th</sup>
 				<b>Subjects:-</b> Maths
-			 </div>	<div class="teacher 3"><img src="">
+			 </div>	<div class="teacher 3"><img src="" height="250px" width="250px">
 			<h2>Urvashi Bhagwani</h2>
 				<b>Class:-</b> X<sup>th</sup>
 				<b>Subjects:-</b> Maths
-			 </div>	<div class="teacher 3"><img src="">
+			 </div>	<div class="teacher 3"><img src="" height="250px" width="250px">
 			<h2>Kushi Daswani</h2>
 				<b>Class:-</b> X<sup>th</sup>
 				<b>Subjects:-</b> Maths
@@ -82,5 +278,15 @@
 	</div>
 </div>
 	<script src="https://kit.fontawesome.com/0fbc4ec2fe.js" crossorigin="anonymous"></script>
+	<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+ 
 </body>
 </html>
